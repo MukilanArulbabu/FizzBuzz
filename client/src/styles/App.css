@@ -1,0 +1,12 @@
+.fullpage-overlap {
+  position: fixed;
+  background-color: rgba(162, 157, 157, 0.23);
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+}
