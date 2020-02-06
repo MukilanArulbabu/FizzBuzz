@@ -42,12 +42,12 @@ class Home extends React.Component {
     return (
       <>
         <Header />
-        <div className="flex flex-col">
+        <div className="flex flex-col px-10">
           <div className="container py-10 max-w-md" >
             <div className="px-4 pb-4">
               <label htmlFor="count" className="text-xl block font-bold pb-2">FizzBuzz Count</label>
               <input type="number" name="count" id="count" className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300 " placeholder="#" />
-              <button onClick={() => this.getFizzBuzz()} className="bg-blue-500 hover:bg-blue-700 text-white font-bold ml-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Boom</button>
+              <button onClick={() => this.getFizzBuzz()} className="bg-blue-500 hover:bg-blue-700 text-white font-bold ml-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Run</button>
             </div>
             {(isErr ? <Alert msg={msg} /> : <div />)}
           </div>

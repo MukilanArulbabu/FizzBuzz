@@ -17,13 +17,18 @@ const Login = (props) => {
                 username: uName,
                 password,
             }
-            const res = await axios.post('/api/login', body);
-            const { data } = res;
-            if (data.auth) {
-                sessionStorage.setItem('token', data.token);
-                setLoading(false);
-                props.history.push('/#');
-            } else {
+            try {
+                const res = await axios.post('/api/login', body);
+                const { data } = res;
+                if (data.auth) {
+                    sessionStorage.setItem('token', data.token);
+                    setLoading(false);
+                    props.history.push('/#');
+                } else {
+                    setLoading(false);
+                    setAlert(true);
+                }
+            } catch(err) {
                 setLoading(false);
                 setAlert(true);
             }
