@@ -6,7 +6,7 @@ exports.auth = (req, res) => {
   try {
     const userName = (req.body && req.body.userName) || '';
     const password = (req.body && req.body.password) || '';
-    if (userName.toLowerCase() === process.env.USER || password === process.env.PASSWORD) {
+    if (userName.toLowerCase() === process.env.USER && password === process.env.PASSWORD) {
       const user = {
         id: 1,
         userName,
